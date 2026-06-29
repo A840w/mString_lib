@@ -6,11 +6,26 @@ int main() {
     insert(arr,10);
     insert(arr, 20);
     insert(arr,30);
+    insert(arr, 9);
+    insert(arr, 2);
+    insert(arr, 5);
 
     printf("elemenet at index 1: %d \n", get(arr, 0) );
     printf("element at index 2: %d\n",get(arr,2));
     set(arr, 2, 69);
     printf("changed alloaction of data: %d\n",get(arr,2));
+
+    printf("before sorting:\n");
+    for (int i = 0; i < arr->size; i++) printf("%d ", get(arr, i));
+    printf("\n");
+    Msort(arr);
+    printf("array after sorting:\n");
+    for (int i = 0;i < arr->size;i++)printf("%d", get(arr, i));
+    printf("\n");
+
+
+    int idx = Msearch(arr, 9);
+    printf("index of 9: %d\n",idx);
 
 
     printf("array size: %d, capacity %d", arr->size, arr->capacity);

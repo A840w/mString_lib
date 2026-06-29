@@ -13,5 +13,6 @@ int get(Marray *arr, int index);
 int set(Marray *arr, int index, int value);
 void Mfree(Marray *arr);
 void MRmAt(Marray *arr, int index);
-
+int Msearch(Marray *arr, int value);
+void Msort(Marray *arr);
 #endif

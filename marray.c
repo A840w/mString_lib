@@ -52,3 +52,22 @@ void MRmAt(Marray *arr, int index) {
     }
    arr->size--;
 }
+
+int Msearch(Marray *arr, int value){
+    for (int i = 0; i < arr->size; i++){
+        if(arr->data[i] == value) return i;
+    }
+    return -1;
+}
+
+void Msort(Marray *arr){
+    for(int i = 0; i < arr->size -1; i++){
+        for(int j = 0; j < arr->size - i - 1; j++) {
+            if(arr->data[j] > arr->data[j +1 ]){
+                int temp = arr-> data[j];
+                arr->data[j]= arr->data[j + 1];
+                arr->data[j + 1] = temp;
+            }
+        }
+    }
+}

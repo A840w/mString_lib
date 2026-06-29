@@ -19,8 +19,8 @@ int main() {
     for (int i = 0; i < arr->size; i++) printf("%d ", get(arr, i));
     printf("\n");
     Msort(arr);
-    printf("array after sorting:\n");
-    for (int i = 0;i < arr->size;i++)printf("%d", get(arr, i));
+    printf("After removing index 1:\n");
+    for (int i = 0; i < arr->size; i++) printf("%d ", get(arr, i));
     printf("\n");
 
 

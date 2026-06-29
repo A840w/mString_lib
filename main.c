@@ -34,6 +34,9 @@ int main() {
     printf("After removing index 1:\n");
     for (int i = 0; i < arr->size; i++) printf("%d ", get(arr, i));
     printf("\n");
+
+    Mresize(arr, 10);
+    printf("new capaccity: %d\n", arr->capacity);
     Mfree(arr);
 
 

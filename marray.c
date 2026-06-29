@@ -53,6 +53,7 @@ void MRmAt(Marray *arr, int index) {
    arr->size--;
 }
 
+// searching elements
 int Msearch(Marray *arr, int value){
     for (int i = 0; i < arr->size; i++){
         if(arr->data[i] == value) return i;
@@ -60,6 +61,7 @@ int Msearch(Marray *arr, int value){
     return -1;
 }
 
+// sorting of array
 void Msort(Marray *arr){
     for(int i = 0; i < arr->size -1; i++){
         for(int j = 0; j < arr->size - i - 1; j++) {
@@ -70,4 +72,11 @@ void Msort(Marray *arr){
             }
         }
     }
+}
+
+// resing arrays
+void Mresize(Marray *arr, int new_capacity){
+    if (new_capacity < arr->size)return;
+    arr->capacity = new_capacity;
+    arr->data = (int*)realloc(arr->data, sizeof(int)* new_capacity);
 }

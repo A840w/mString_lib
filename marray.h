@@ -11,6 +11,6 @@ Marray* init_array(int capacity);
 void insert(Marray *arr, int value);
 int get(Marray *arr, int index);
 int set(Marray *arr, int index, int value);
-int Mfree(Marray *arr);
+void Mfree(Marray *arr);
 
 #endif

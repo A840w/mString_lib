@@ -36,3 +36,9 @@ int set(Marray *arr, int index, int value){
         arr->data[index] = value;
     }
 }
+
+// free hehe
+void Mfree(Marray *arr){
+    free(arr->data);
+    free(arr);
+}

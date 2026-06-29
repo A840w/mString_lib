@@ -12,6 +12,9 @@ int main() {
     set(arr, 2, 69);
     printf("changed alloaction of data: %d\n",get(arr,2));
 
+    printf("array size: %d, capacity %d", arr->size, arr->capacity);
+    Mfree(arr);
+
 
 
     // char str1[50] = "heello";

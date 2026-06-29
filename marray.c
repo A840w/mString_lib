@@ -42,3 +42,13 @@ void Mfree(Marray *arr){
     free(arr->data);
     free(arr);
 }
+
+// removing allocations 
+void MRmAt(Marray *arr, int index) {
+    if (index < 0 || index >= arr->size)return;
+
+    for (int i = index; i < arr->size -1; i++){
+        arr->data[i] = arr->data[i + 1];
+    }
+   arr->size--;
+}

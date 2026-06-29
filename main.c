@@ -12,7 +12,13 @@ int main() {
     set(arr, 2, 69);
     printf("changed alloaction of data: %d\n",get(arr,2));
 
+
     printf("array size: %d, capacity %d", arr->size, arr->capacity);
+    printf("\n");
+    MRmAt(arr, 0);
+    printf("After removing index 1:\n");
+    for (int i = 0; i < arr->size; i++) printf("%d ", get(arr, i));
+    printf("\n");
     Mfree(arr);
 
 
